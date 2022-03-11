@@ -22,10 +22,10 @@ global:
     ## @param global.postgresql.auth.existingSecret Name of existing secret to use for PostgreSQL credentials (overrides `auth.existingSecret`)
     ##
     auth:
-      postgresPassword: ""
-      username: ""
-      password: ""
-      database: ""
+      postgresPassword: "secretPassword"
+      username: "abhi"
+      password: "password123"
+      database: "my-postgres"
       existingSecret: ""
     ## @param global.postgresql.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
     ##
@@ -115,16 +115,16 @@ auth:
   enablePostgresUser: true
   ## @param auth.postgresPassword Password for the "postgres" admin user
   ##
-  postgresPassword: ""
+  postgresPassword: "secretPassword"
   ## @param auth.username Name for a custom user to create
   ##
-  username: ""
+  username: "abhi"
   ## @param auth.password Password for the custom user to create
   ##
-  password: ""
+  password: "password123"
   ## @param auth.database Name for a custom database to create
   ##
-  database: ""
+  database: "my-postgres"
   ## @param auth.replicationUsername Name of the replication user
   ##
   replicationUsername: repl_user
@@ -321,10 +321,10 @@ primary:
     scriptsSecret: ""
     ## @param primary.initdb.user Specify the PostgreSQL username to execute the initdb scripts
     ##
-    user: ""
+    user: "abhi"
     ## @param primary.initdb.password Specify the PostgreSQL password to execute the initdb scripts
     ##
-    password: ""
+    password: "password123"
   ## Configure current cluster's primary server to be the standby server in other cluster.
   ## This will allow cross cluster replication and provide cross cluster high availability.
   ## You will need to configure pgHbaConfiguration if you want to enable this feature with local cluster replication enabled.
